@@ -19,6 +19,7 @@
     background: rgba(255,255,255,0.5);
     padding: 20px;
 }
+
 .grid form input {
     padding: 10px;
     margin-bottom: 30px;
@@ -79,4 +80,24 @@
 .grid form div input:valid,
 .grid form div textarea:valid{
     border-bottom: 2px solid #bf0f1e;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: unset;
+        grid-template-rows: auto auto;
+    }
+
+    .grid .desc {
+        line-height: 1.1em;
+        font-size: 0.9em;
+        padding: 0 30px;
+    }
+    
+    .grid form {
+        width: 90%;
+        justify-self: center;
+        background: rgba(255,255,255,0.5);
+        padding: 10px 20px;
+    }
 }

@@ -223,3 +223,74 @@ footer {
     font-family: sans-serif;
     text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+    section {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 50% auto;
+        height: 100vh;
+    }
+
+    section .desc {
+        background: rgba(249, 249, 249, 0.4);
+        width: 80%;
+        margin: auto;
+    }
+    
+    section .desc h1 {
+        font-size: 2em;
+    }
+    
+    section .desc p {
+        font-size: 1.1em;
+    }
+    
+    .first .img, .second .img, .third .img {
+        position: relative;   
+        height: 100%;
+    }
+
+    .first .img img, .third .img img  {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .second {
+        grid-template-areas: "img"
+                             "desc";
+    }
+
+    .second .desc {
+        grid-area: desc;
+    }
+
+    .second .img {
+        grid-area: img;
+    }
+
+    .second .img img {
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        margin: auto;
+    }
+
+    .showcase {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .showcase div {
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 33%);
+        overflow: hidden;
+    }
+}
