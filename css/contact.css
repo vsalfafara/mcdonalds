@@ -1,0 +1,82 @@
+.grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 50% auto;
+    height: calc(100vh - 170.8px);
+    padding: 40px 10px;
+    font-family: sans-serif;
+}
+
+.grid .desc {
+    line-height: 1.5em;
+    font-size: 1.5em;
+    padding: 30px;
+}
+
+.grid form {
+    width: 90%;
+    justify-self: center;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+}
+.grid form input {
+    padding: 10px;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+
+.grid form textarea {
+    height: 80px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.grid form input,
+.grid form textarea {
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+}
+
+.grid form input[type="submit"]{
+    border-bottom: none;
+    cursor: pointer;
+    background: #bf0f1e;
+    color: #f9f9f9;
+    font-weight: bold;
+    margin: 0;
+}
+
+.grid form div {
+    position: relative;
+}
+
+.grid form div label {
+    position: absolute;
+    padding: 0 10px;
+    top: 10px;
+    left: 0;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.grid form div input:focus ~ label,
+.grid form div textarea:focus ~ label,
+.grid form div input:valid ~ label,
+.grid form div textarea:valid ~ label{
+    padding: 0;
+    top: -15px;
+    font-size: 12px;
+    color: #bf0f1e;
+    font-weight: bold;
+}
+
+.grid form div input:focus,
+.grid form div textarea:focus,
+.grid form div input:valid,
+.grid form div textarea:valid{
+    border-bottom: 2px solid #bf0f1e;
+}
